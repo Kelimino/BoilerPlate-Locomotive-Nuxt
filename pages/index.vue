@@ -3,15 +3,16 @@
     <h1>HOME</h1>
     <section data-scroll-section>
       <div>
-        <Logo data-scroll data-scroll-speed="1" :width="350"/>
+        <Logo data-scroll data-scroll-speed="1" :width="350" />
         <h1 class="title">
           NUXT
           <span class="green">JS</span>
         </h1>
         <h2 class="subtitle">Starter for CodeSandBox</h2>
         <div class="links">
-          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation
-            <IconLink/>
+          <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+            >Documentation
+            <IconLink />
           </a>
           <NLink to="/about" class="button--grey">About</NLink>
         </div>
@@ -19,15 +20,33 @@
     </section>
     <section data-scroll-section>
       <div>
-        <Logo data-scroll data-scroll-speed="1" :width="350"/>
+        <Logo data-scroll data-scroll-speed="1" :width="350" />
         <h1 class="title">
           NUXT
           <span class="green">JS</span>
         </h1>
         <h2 class="subtitle">Starter for CodeSandBox</h2>
         <div class="links">
-          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation
-            <IconLink/>
+          <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+            >Documentation
+            <IconLink />
+          </a>
+          <NLink to="/about" class="button--grey">About</NLink>
+        </div>
+      </div>
+    </section>
+    <section data-scroll-section data-scroll-call="hello">
+      <div>
+        <Logo data-scroll data-scroll-speed="1" :width="350" />
+        <h1 class="title">
+          NUXT
+          <span class="green">JS</span>
+        </h1>
+        <h2 class="subtitle">Starter for CodeSandBox</h2>
+        <div class="links">
+          <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+            >Documentation
+            <IconLink />
           </a>
           <NLink to="/about" class="button--grey">About</NLink>
         </div>
@@ -35,31 +54,16 @@
     </section>
     <section data-scroll-section>
       <div>
-        <Logo data-scroll data-scroll-speed="1" :width="350"/>
+        <Logo :width="350" />
         <h1 class="title">
           NUXT
           <span class="green">JS</span>
         </h1>
         <h2 class="subtitle">Starter for CodeSandBox</h2>
         <div class="links">
-          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation
-            <IconLink/>
-          </a>
-          <NLink to="/about" class="button--grey">About</NLink>
-        </div>
-      </div>
-    </section>
-    <section data-scroll-section>
-      <div>
-        <Logo :width="350"/>
-        <h1 class="title">
-          NUXT
-          <span class="green">JS</span>
-        </h1>
-        <h2 class="subtitle">Starter for CodeSandBox</h2>
-        <div class="links">
-          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation
-            <IconLink/>
+          <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+            >Documentation
+            <IconLink />
           </a>
           <NLink to="/about" class="button--grey">About</NLink>
         </div>
@@ -76,9 +80,17 @@ import locomotive from "~/mixins/locomotive.js";
 export default {
   components: {
     Logo,
-    IconLink
+    IconLink,
   },
-  mixins: [locomotive]
+  methods: {
+    hello: function () {
+      console.log("hey");
+    },
+  },
+  mixins: [locomotive],
+  mounted() {
+    // hello () => console.log("hey");
+  },
 };
 </script>
 
@@ -89,18 +101,18 @@ export default {
   display: block;
   font-weight: 400;
   font-size: 100px;
-  color: #2E495E;
+  color: #2e495e;
   letter-spacing: 1px;
   font-size: 6em;
 }
 .green {
-  color: #00C48D;
+  color: #00c48d;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 3em;
-  color: #2E495E;
+  color: #2e495e;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
